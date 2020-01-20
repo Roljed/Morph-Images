@@ -14,6 +14,7 @@ v = VideoWriter(fileName, format);
 v.Quality = 95;
 open(v); 
 for t  = 0: 1 / (numFrames - 1) : 1
+    fprintf('%.f%%\n', t * 100);
     pointsT = calcIntermediateMesh(pointsSource, pointsTarget, t);
     imST = warpImage(imSource, pointsSource, pointsT, meshForMorph);
     imTT = warpImage(imTarget, pointsTarget, pointsT, meshForMorph);

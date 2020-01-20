@@ -12,12 +12,12 @@ function [P1,P2,P3,rowNum] = findTriangle(P, pointList, mesh, row)
 %           rowNum � the row number in input array mesh, where the triangle points reside.
 
 x = size(mesh, 1);
-P1 = pointList (mesh(row, 1) , :);
-P2 = pointList (mesh(row, 2) , :);
-P3 = pointList (mesh(row, 3) , :);
+P1 = pointList(mesh(row, 1) , :);
+P2 = pointList(mesh(row, 2) , :);
+P3 = pointList(mesh(row, 3) , :);
 rowNum = row;
 
-for i=1 : x
+for i = 1 : x
     A = pointList(mesh(i, 1), :);
     B = pointList(mesh(i, 2), :);
     C = pointList(mesh(i, 3), :);
